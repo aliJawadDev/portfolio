@@ -78,6 +78,7 @@ function App() {
 
   const [alert, setAlert] = useState({message:"",error: false});
 
+  var age = new Date().getFullYear() - 2006;
 
   const mealMonkeyPictures = [
     mealMonkey0,
@@ -139,7 +140,7 @@ function App() {
         <img src={profilePic} alt="Loading..." className="animate__animated animate__bounceInLeft anim_delay_500ms profileImg" />
         <div style={{ color: 'white', marginRight: 50 }}>
           <h3 className="animate__animated animate__bounceInRight anim_delay_500ms">
-            I am a 14-year-old full-stack developer who has a passion for web and mobile app development.</h3>
+            I am a {age}-year-old full-stack developer who has a passion for web and mobile app development.</h3>
           <h3 className="animate__animated animate__bounceInRight anim_delay_500ms">
             I have more than two years of experience in programming.</h3>
           <h3 className="animate__animated animate__bounceInRight anim_delay_500ms">
