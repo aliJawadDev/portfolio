@@ -1,142 +1,174 @@
 /* golden = FFD700 
    black = 101820FF*/
-*{
+* {
   user-select: none;
 }
-   .App {
+.userSelect{
+  user-select:text !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+.App {
   background-color: #101820FF;
   min-height: 100vh;
-  width: 100%;
+  width: 100% !important;
   font-family: 'Roboto Slab', sans-serif;
-  overflow-x: hidden !important;
+  overflow: hidden !important;
   padding-top: 80px;
 }
-.profileImg{
+
+.profileImg {
   height: 500px;
-  margin: 30px;
+  margin: 50px;
   margin-top: -40px;
-  width: 400px; 
+  width: 400px;
   float: left;
-  object-fit: 'contain';
+  object-fit: cover;
   transition: all 500ms;
 }
 
-.aboutDiv h3{
-  transition: all 500ms;
-  margin-bottom: 0px;
-  margin-top: 10px;
+.aboutDiv div{
+  color: white;
+  margin-right: 50px;
 }
-.aboutDiv h2{
+
+.aboutDiv h3 {
   transition: all 500ms;
-  font-weight:'bold';
-  margin-top:40px;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
 }
-.aboutDiv li{
+
+.aboutDiv h2 {
+  transition: all 500ms;
+  font-weight: 'bold';
+  margin-top: 40px;
+}
+
+.aboutDiv li {
   transition: all 500ms;
 }
 
-.aboutDiv{
+.aboutDiv {
   margin-top: 100px;
 }
-.skillDiv{
-margin:20px;
-display: flex;
-flex-direction: row;
-flex:1;
-}
-.skillFrontEnd{
-  flex:1;
+
+.skillDiv {
   margin: 20px;
-}
-.skillBackEnd{
-  flex:1;
-  margin: 20px;
-}
-.projectsParentCon{
   display: flex;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex: 1;
 }
-.projectCon{
-  flex:1 !important;
+
+.skillFrontEnd {
+  flex: 1;
+  margin: 20px;
+}
+
+.skillBackEnd {
+  flex: 1;
+  margin: 20px;
+}
+
+.projectsParentCon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projectCon {
+  flex: 1 !important;
   margin: 10px;
 }
-.imageSliderTitle{
+
+.imageSliderTitle {
   text-align: center;
-  color: white; 
+  color: white;
 }
-.contactCon{
+
+.contactCon {
   display: flex;
   flex-direction: row;
   width: 90%;
   margin: auto;
   margin-top: 50px;
 }
-.contactForm{
+
+.contactForm {
   display: flex;
   flex-direction: column;
-  flex:1;
+  flex: 1;
   max-width: 50%;
 }
-.contactFormLabel{
-  color:white;
+
+.contactFormLabel {
+  color: white;
   font-size: 1.1em;
   margin-top: 10px;
 }
-.contactFormLabelRequired{
-  color:white;
+
+.contactFormLabelRequired {
+  color: white;
   font-size: 0.55em;
   margin-left: 5px;
 }
-.contactInput{
+
+.contactInput {
   border: none;
   margin: 5px;
   padding: 5px;
   font-family: 'Roboto Slab', sans-serif;
   max-width: 90%;
 }
-.contactFormBtn{
+
+.contactFormBtn {
   width: 100px;
   padding: 10px;
   border-radius: 10px;
   transition: all 300ms;
   margin: 20px;
   font-size: 1em;
-  background-color: green;
-  border-color: green;
+  background-color: gold;
+  border-color: gold;
   color: white;
   font-family: 'Roboto Slab', sans-serif;
   overflow: hidden;
   rotate: 10deg;
+  color: #282c34;
 }
-.contactFormBtn:hover{
+
+.contactFormBtn:hover {
   rotate: 0deg;
   cursor: pointer;
 }
-.contactInfoCon{
+
+.contactInfoCon {
   display: flex;
-  flex:1;
+  flex: 1;
   flex-direction: column;
   padding-left: 20px;
 }
-.contactInfoTitle{
-  color:white;
+
+.contactInfoTitle {
+  color: white;
   margin: 0px;
   margin-top: 10px;
 }
-.contactInfoData{
-  color:white;
+
+.contactInfoData {
+  color: white;
   margin: 0px;
   margin-top: 5px;
 }
 
-.contactInfoDivider{
+.contactInfoDivider {
   width: 100%;
   height: 3px;
   background-color: gray;
   margin-top: 20px;
   margin-bottom: 15px;
 }
-.contactInfoLink{
+
+.contactInfoLink {
   color: white;
   font-size: small;
   margin-top: 5px;
@@ -144,173 +176,157 @@ flex:1;
   text-decoration: underline;
   text-decoration-color: transparent;
 }
-.contactInfoLink:hover{
+
+.contactInfoLink:hover {
   cursor: pointer;
   text-decoration-color: white;
 }
+
+.slider {
+  height: 500px;
+  width: 400px;
+  margin: auto
+}
+.leaveMsgTxt{
+  color:white;
+  font-style:italic;
+  margin:0px;
+  margin-bottom:10px;
+  text-align:center;
+  display: none;
+}
 @media screen and (max-width: 1200px) {
-  .project1, .project2 {
+
+  .project1,
+  .project2 {
     flex: 0 0 50%;
   }
-  .project3{ 
+
+  .project3 {
     flex: 0 0 100%;
   }
 }
+
 @media screen and (max-width: 950px) {
-  .profileImg{
-  height: 400px;
-  width: 300px; 
+  .profileImg {
+    height: 400px;
+    width: 300px;
   }
-  .aboutDiv h3{
-    font-size:16px;
+
+  .aboutDiv h3 {
+    font-size: 16px;
     margin-top: 5px;
   }
-  .aboutDiv h2{
-    font-size:20px;
-  margin-top:25px;
-  margin-bottom: -5px;
+
+  .aboutDiv h2 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: -5px;
   }
-  .aboutDiv li{
-    font-size:14px;
+
+  .aboutDiv li {
+    font-size: 14px;
   }
 }
+
 @media screen and (max-width: 800px) {
-  .profileImg{
-  height: 300px;
-  width: 200px;
-  margin-top: 0px;
+  .profileImg {
+    height: 300px;
+    width: 200px;
+    margin-top: 0px;
   }
-  .aboutDiv h3{
-    font-size:13px;
+
+  .aboutDiv h3 {
+    font-size: 13px;
   }
-  .aboutDiv h2{
-    font-size:15px;
+
+  .aboutDiv h2 {
+    font-size: 15px;
     display: block;
   }
-  .aboutDiv li{
-    font-size:13px;
+
+  .aboutDiv li {
+    font-size: 13px;
   }
-  .aboutDiv{
+
+  .aboutDiv {
     margin-top: 50px;
   }
 }
+
 @media screen and (max-width: 650px) {
-  .profileImg{
-  height: 200px;
-  width: 150px;
-  margin:20px;
-  margin-top: 0px;
+  .profileImg {
+    height: 200px;
+    width: 150px;
+    margin: 20px;
+    margin-top: 0px;
 
   }
-  .aboutDiv h3{
+  .aboutDiv h3 {
     font-size: 15px;
-    margin:5px;
+    margin: 5px;
     margin-top: 8px;
   }
-  .aboutDiv h2{
+
+  .aboutDiv h2 {
     margin-left: 10px;
   }
-  .skillDiv{
-    margin:0px
+
+  .skillDiv {
+    margin: 0px
   }
-  .skillFrontEnd{
+
+  .skillFrontEnd {
     margin: 5px;
   }
-  .skillBackEnd{
+
+  .skillBackEnd {
     margin: 5px;
   }
-  .project3, .project1, .project2{ 
+
+  .project3,
+  .project1,
+  .project2 {
     flex: 0 0 100%;
   }
+  .contactCon{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contactInfoCon{
+    padding-left: 0px;
+  }
+  .contactForm{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .leaveMsgTxt{
+    display: block;
+  }
 }
-
-
-
-
-.anim_delay_50ms{
-  animation-delay: 50ms;
+@media screen and (max-width: 450px) {
+  .slider{
+    width: 100% !important;
+    min-width: 100%;
+  }
+  .projectsParentCon{
+    flex-direction: column;
+  }
+  .profileImg{
+    width: 90%;
+    min-height: 300px !important;
+    margin: 5%;
+    display: block;
+    object-fit: contain;
+  }
+  .aboutDiv div{
+    margin-right: 0px;
+  }
 }
-.anim_delay_100ms{
-  animation-delay: 100ms;
-}
-.anim_delay_150ms{
-  animation-delay: 150ms;
-}
-.anim_delay_200ms{
-  animation-delay: 200ms;
-}
-.anim_delay_250ms{
-  animation-delay: 250ms;
-}
-.anim_delay_300ms{
-  animation-delay: 300ms;
-}
-.anim_delay_350ms{
-  animation-delay: 350ms;
-}
-.anim_delay_400ms{
-  animation-delay: 400ms;
-}
-.anim_delay_450ms{
-  animation-delay: 450ms;
-}
-.anim_delay_500ms{
-  animation-delay: 500ms;
-}
-.anim_delay_550ms{
-  animation-delay: 550ms;
-}
-.anim_delay_600ms{
-  animation-delay: 600ms;
-}
-.anim_delay_650ms{
-  animation-delay: 650ms;
-}
-.anim_delay_700ms{
-  animation-delay: 700ms;
-}
-.anim_delay_750ms{
-  animation-delay: 750ms;
-}
-.anim_delay_800ms{
-  animation-delay: 800ms;
-}
-.anim_delay_850ms{
-  animation-delay: 850ms;
-}
-.anim_delay_900ms{
-  animation-delay: 900ms;
-}
-.anim_delay_950ms{
-  animation-delay: 950ms;
-}
-.anim_delay_1s{
-  animation-delay: 1s;
-}
-.anim_delay_1dot5s{
-  animation-delay: 1.5s;
-}
-.anim_delay_2s{
-  animation-delay: 2s;
-}
-.anim_delay_2dot5s{
-  animation-delay: 2.5s;
-}
-.anim_delay_3s{
-  animation-delay: 3s;
-}
-.anim_delay_3dot5s{
-  animation-delay: 3.5s;
-}
-.anim_delay_4s{
-  animation-delay: 4s;
-}
-.anim_delay_4dot5s{
-  animation-delay: 4.5s;
-}
-.anim_delay_5s{
-  animation-delay: 5s;
-}
-.hidden{
-  visibility: hidden;
+@media screen and (max-width: 350px) {
+  .skillDiv{
+    flex-direction: column !important;
+    margin: 5%;
+  }
 }
