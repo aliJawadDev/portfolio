@@ -54,23 +54,23 @@ export const mindset = [
   {
     step: '01',
     title: 'Input',
-    question: 'Where does the data come from?',
+    question: 'What data do we need, where does it come from, and what type is it?',
     description:
-      'Identify the source, understand the data, and figure out how to collect it.',
+      'Identify the required data, find its source, and understand what type of data we are working with.',
   },
   {
     step: '02',
     title: 'Process',
-    question: 'What needs to happen to it?',
+    question: 'What do we need to do with the data?',
     description:
-      'Transform, validate, calculate, or make decisions based on the data.',
+      'Determine what operations, logic, or calculations we need to perform to get the desired result.',
   },
   {
     step: '03',
     title: 'Output',
-    question: 'Where does the result go?',
+    question: 'Where should the result go, and in what form?',
     description:
-      'Send it to its destination, store it, communicate it, or present it to the user.',
+      'Decide where to send the result, how to present it, and whether to store it or transmit it to another system.',
   },
 ]
 
