@@ -192,83 +192,84 @@ export default function Hero() {
           initial={{ opacity: 0, x: 24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="glass relative overflow-hidden rounded-2xl border border-white/10"
         >
-          {/* Terminal header */}
-          <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
-            <div className="flex select-none gap-1.5">
-              {[
-                {
-                  color: 'bg-red-400',
-                  symbol: '×',
-                  label: 'Close',
-                },
-                {
-                  color: 'bg-yellow-400',
-                  symbol: '−',
-                  label: 'Minimize',
-                },
-                {
-                  color: 'bg-green-400',
-                  symbol: '+',
-                  label: 'Zoom',
-                },
-              ].map(({ color, symbol, label }) => (
-                <span
-                  key={label}
-                  aria-label={label}
-                  className={`group/dot flex h-3 w-3 items-center justify-center rounded-full ${color} transition-shadow duration-200 hover:shadow-[0_0_8px_currentColor]`}
-                >
-                  <span className="scale-0 text-[9px] font-bold leading-none text-black/70 transition-transform duration-150 group-hover/dot:scale-100">
-                    {symbol}
-                  </span>
-                </span>
-              ))}
-            </div>
-
-            <div className="flex items-center gap-1 text-xs text-ink/50">
-              <Terminal size={14} />
-              <span>developer.tsx</span>
-            </div>
-
-            <span className="w-10" aria-hidden="true" />
-          </div>
-
-          {/* Full source-code typing effect */}
-          <div className="p-5 sm:p-6">
-            <div className="min-h-[360px] overflow-x-auto">
-              <pre className="whitespace-pre-wrap break-words font-mono text-xs leading-6 sm:text-sm">
-                <code>
-                  {typedCode.split('\n').map((line, index, lines) => (
-                    <span key={index}>
-                      {renderCodeLine(line)}
-                      {index < lines.length - 1 ? '\n' : ''}
+          <GlassCard noPadding  className="relative overflow-hidden rounded-2xl border border-white/10">
+            {/* Terminal header */}
+            <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+              <div className="flex select-none gap-1.5">
+                {[
+                  {
+                    color: 'bg-red-400',
+                    symbol: '×',
+                    label: 'Close',
+                  },
+                  {
+                    color: 'bg-yellow-400',
+                    symbol: '−',
+                    label: 'Minimize',
+                  },
+                  {
+                    color: 'bg-green-400',
+                    symbol: '+',
+                    label: 'Zoom',
+                  },
+                ].map(({ color, symbol, label }) => (
+                  <span
+                    key={label}
+                    aria-label={label}
+                    className={`group/dot flex h-3 w-3 items-center justify-center rounded-full ${color} transition-shadow duration-200 hover:shadow-[0_0_8px_currentColor]`}
+                  >
+                    <span className="scale-0 text-[9px] font-bold leading-none text-black/70 transition-transform duration-150 group-hover/dot:scale-100">
+                      {symbol}
                     </span>
-                  ))}
+                  </span>
+                ))}
+              </div>
 
-                  {!terminalComplete && (
-                    <span className="animate-pulse text-accent">▍</span>
-                  )}
-                </code>
-              </pre>
+              <div className="flex items-center gap-1 text-xs text-ink/50">
+                <Terminal size={14} />
+                <span>developer.tsx</span>
+              </div>
+
+              <span className="w-10" aria-hidden="true" />
             </div>
 
-            {/* Terminal status */}
-            <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs">
-              <span className="text-ink/40">
-                {terminalComplete
-                  ? 'All objects loaded'
-                  : 'Writing code...'}
-              </span>
+            {/* Full source-code typing effect */}
+            <div className="p-5 sm:p-6">
+              <div className="min-h-[360px] overflow-x-auto">
+                <pre className="whitespace-pre-wrap break-words font-mono text-xs leading-6 sm:text-sm">
+                  <code>
+                    {typedCode.split('\n').map((line, index, lines) => (
+                      <span key={index}>
+                        {renderCodeLine(line)}
+                        {index < lines.length - 1 ? '\n' : ''}
+                      </span>
+                    ))}
 
-              <span className="flex items-center gap-2 text-emerald-300">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                {terminalComplete ? 'Ready' : 'Typing'}
-              </span>
+                    {!terminalComplete && (
+                      <span className="animate-pulse text-accent">▍</span>
+                    )}
+                  </code>
+                </pre>
+              </div>
+
+              {/* Terminal status */}
+              <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs">
+                <span className="text-ink/40">
+                  {terminalComplete
+                    ? 'All objects loaded'
+                    : 'Writing code...'}
+                </span>
+
+                <span className="flex items-center gap-2 text-emerald-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                  {terminalComplete ? 'Ready' : 'Typing'}
+                </span>
+              </div>
             </div>
-          </div>
+          </GlassCard>
         </motion.div>
       </div>
-    </section>
+    </section >
   )
 }

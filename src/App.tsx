@@ -6,14 +6,12 @@ import Experience from './sections/Experience'
 import Hero from './sections/Hero'
 import Skills from './sections/Skills'
 import FogBackground from './components/FogBackground'
-import CursorEffects from './components/CursorEffects'
 
 function App() {
   return (
     <>
       <Navbar />
       <FogBackground />
-      <CursorEffects />
       <main className="mx-auto max-w-5xl px-6">
         <Hero />
         <About />
