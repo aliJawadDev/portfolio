@@ -1,0 +1,104 @@
+
+.fog-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #080811;
+  isolation: isolate;
+}
+
+.fog-cloud {
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  min-width: 350px;
+  min-height: 350px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.32;
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+
+.fog-cloud-1 {
+  top: -20%;
+  left: -15%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.75) 0%,
+    rgba(79, 70, 229, 0.3) 35%,
+    transparent 70%
+  );
+  animation: fog-drift-1 22s ease-in-out infinite alternate;
+}
+
+.fog-cloud-2 {
+  top: 15%;
+  right: -25%;
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.6) 0%,
+    rgba(59, 130, 246, 0.25) 40%,
+    transparent 70%
+  );
+  animation: fog-drift-2 28s ease-in-out infinite alternate;
+}
+
+.fog-cloud-3 {
+  top: 50%;
+  left: 15%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.45) 0%,
+    rgba(99, 102, 241, 0.2) 40%,
+    transparent 70%
+  );
+  animation: fog-drift-3 25s ease-in-out infinite alternate;
+}
+
+.fog-cloud-4 {
+  bottom: -30%;
+  right: 5%;
+  background: radial-gradient(
+    circle,
+    rgba(6, 182, 212, 0.4) 0%,
+    rgba(79, 70, 229, 0.2) 40%,
+    transparent 70%
+  );
+  animation: fog-drift-1 32s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes fog-drift-1 {
+  from {
+    transform: translate3d(-5%, -3%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(15%, 12%, 0) scale(1.2);
+  }
+}
+
+@keyframes fog-drift-2 {
+  from {
+    transform: translate3d(5%, -8%, 0) scale(1.1);
+  }
+  to {
+    transform: translate3d(-18%, 15%, 0) scale(0.9);
+  }
+}
+
+@keyframes fog-drift-3 {
+  from {
+    transform: translate3d(-12%, 5%, 0) scale(0.9);
+  }
+  to {
+    transform: translate3d(18%, -12%, 0) scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fog-cloud {
+    animation: none;
+  }
+}

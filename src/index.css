@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Midnight Fog palette */
+@theme {
+  --color-night: #0b0f1a;
+  --color-fog-1: #1e2a4a;
+  --color-fog-2: #3b4b7a;
+  --color-accent: #7c9cff;
+  --color-ink: #e8ecf5;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-night);
+}
+
+body {
+  margin: 0;
+  background: var(--color-night);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+/* Glass finish: 6% white fill, 20px blur, 12% white border */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
